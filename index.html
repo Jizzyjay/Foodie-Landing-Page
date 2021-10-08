@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Foodie</title>
     <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="full-page">
@@ -15,16 +19,42 @@
             </div>
             <nav>
                 <ul id="menu-items">
-                    <l1><a href="#">Home</a></l1>
-                    <l1><a href="#">About Us</a></l1>
-                    <l1><a href="#">Services</a></l1>
-                    <l1><a href="#">Contact</a></l1>
-                    <li><button class='loginbtn'
-                        onclick="document.getElementById('Login-form').style.display='block'" 
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><button class='loginbtn' 
+                        onclick="document.getElementById('login-form').style.display='block'" 
                         style="width: auto;">Login</button></li>
                 </ul>
             </nav>
         </div>
+
+        <div id='login-form' class='login-page'>
+            <div class="form-box">
+                <div class="button-box">
+                    <div id="btn"></div>
+                    <button type='button'onclick='login()'class='toggle-btn'>Log In</button>
+                    <button type='button'onclick='register()'class='toggle-btn'>Register</button>
+                </div>
+                <form action="" id="login" class="input-group-login">
+                    <input type="text" class="input-field" placeholder="Enter Email">
+                    <input type="password" class="input-field" placeholder="Enter Password">
+                    <input type="checkbox" class="check-box"><span>Remember Password</span>
+                    <button type="submit" class="submit-btn">Login</button>
+                </form>
+                <form action="" id="register" class="input-group-register">
+                    <input type="text" class="input-field" placeholder="First Name" required>
+                    <input type="text" class="input-field" placeholder="Last Name" required>
+                    <input type="email" class="input-field" placeholder="Enter Email" required>
+                    <input type="password" class="input-field" placeholder="Enter Password">
+                    <input type="checkbox" class="check-box"><span>Remember Password</span>
+                    <button type="submit" class="submit-btn">Register</button> 
+                </form>
+            </div>
+        </div>
     </div>
+
+    <script src="main.js"></script>
 </body>
 </html>
